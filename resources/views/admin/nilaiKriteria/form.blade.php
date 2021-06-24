@@ -13,7 +13,7 @@
                         @csrf
                         <input type="hidden" name="id" id="id">
                         <div class="row">
-                            <div class="col-4">
+                            <div class="col-8">
                                 <div class="form-group">
                                     <div class="controls">
                                         <label for="kriteria_id">Kriteria</label>
@@ -27,7 +27,20 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-2">
+                            <div class="col-4 col-lg-2">
+                                <div class="form-group">
+                                    <div class="controls">
+                                        <label for="operator">Operator</label>
+                                        <select id="operator" name="operator" data-toggle="select" required
+                                            class="form-control">
+                                            <option value="<=" selected="">
+                                                <= </option> <option value=">="> >=
+                                            </option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-4 col-lg-2">
                                 <div class="form-group">
                                     <div class="controls">
                                         <label for="bobot_kriteria">Nilai</label>
@@ -36,7 +49,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-3">
+                            <div class="col-6">
                                 <div class="form-group">
                                     <div class="controls">
                                         <label for="himpunan_id">Himpunan</label>
@@ -50,7 +63,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-3">
+                            <div class="col-6">
                                 <div class="form-group">
                                     <div class="controls">
                                         <label for="metode">Metode</label>

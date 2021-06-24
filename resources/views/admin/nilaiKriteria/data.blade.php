@@ -4,6 +4,7 @@
         <tr>
             <th>No</th>
             <th>Nama Kriteria</th>
+            <th>Operator</th>
             <th>Bobot</th>
             <th>Himpunan</th>
             <th>Metode</th>
@@ -16,6 +17,7 @@
         <tr>
             <td>{{ $loop->iteration }}</td>
             <td>{{ $item->kriteria->nm_kriteria }}</td>
+            <td>{{ $item->operator }}</td>
             <td>{{ $item->bobot_kriteria }}</td>
             <td>{{ $item->himpunan->nm_himpunan }}</td>
             <td>{{ $item->metode }}</td>

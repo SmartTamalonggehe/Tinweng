@@ -17,7 +17,9 @@ class NilaiKriteriaController extends Controller
      */
     public function index(Request $request)
     {
-        $nilaiKriteria = NilaiKriteria::all();
+        $nilaiKriteria = NilaiKriteria::with('kriteria')
+            ->get()
+            ->sortBy('kriteria.nm_kriteria')->sortBy('kriteria.jenis');
 
         $kriteria = Kriteria::orderBy('nm_kriteria')->get();
         $himpunan = Himpunan::orderBy('nm_himpunan')->get();
@@ -58,6 +60,7 @@ class NilaiKriteriaController extends Controller
             'bobot_kriteria' => $request->bobot_kriteria,
             'himpunan_id' => $request->himpunan_id,
             'metode' => $request->metode,
+            'operator' => $request->operator,
         ]);
     }
 
@@ -98,6 +101,7 @@ class NilaiKriteriaController extends Controller
                 'bobot_kriteria' => $request->bobot_kriteria,
                 'himpunan_id' => $request->himpunan_id,
                 'metode' => $request->metode,
+                'operator' => $request->operator,
             ]);
     }
 

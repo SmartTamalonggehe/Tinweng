@@ -17,6 +17,7 @@ if (route === "nilaiKriteria") {
         $("#bobot_kriteria").val(data.bobot_kriteria);
         $("#himpunan_id").val(data.himpunan_id);
         $("#metode").val(data.metode);
+        $("#operator").val(data.operator);
         $(".tampilModal").modal("show");
         $("#judul").html("Silahkan Merubah Data");
         $("#tombolForm").html("Ubah Data");

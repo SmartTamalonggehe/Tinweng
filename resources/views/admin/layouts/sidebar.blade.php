@@ -38,31 +38,12 @@
 
                 <li>
                     <a href="javascript: void(0);" class="has-arrow waves-effect">
-                        <i class="ti-package"></i>
+                        <i class="mdi mdi-meditation"></i>
                         <span>Pemakai</span>
                     </a>
                     <ul class="sub-menu" aria-expanded="false">
                         <li><a href="{{ route('pemakai.index') }}">Data Pemakai</a></li>
                         <li><a href="{{ route('nilaiPemakai.index') }}">Nilai Pemakai</a></li>
-                    </ul>
-                </li>
-
-                <li>
-                    <a href="javascript: void(0);" class="waves-effect">
-                        <i class="ti-pie-chart"></i>
-                        <span class="badge badge-pill badge-success float-right">6</span>
-                        <span>@lang('translation.Forms')</span>
-                    </a>
-                    <ul class="sub-menu" aria-expanded="false">
-                        <li><a href="form-elements">@lang('translation.Form_Elements')</a></li>
-                        <li><a href="form-validation">@lang('translation.Form_Validation')</a></li>
-                        <li><a href="form-advanced">@lang('translation.Form_Advanced')</a></li>
-                        <li><a href="form-editors">@lang('translation.Form_Editors')</a></li>
-                        <li><a href="form-uploads">@lang('translation.Form_File_Upload')</a></li>
-                        <li><a href="form-xeditable">@lang('translation.Form_Xeditable')</a></li>
-                        <li><a href="form-repeater">@lang('translation.Form_Repeater')</a></li>
-                        <li><a href="form-wizard">@lang('translation.Form_Wizard')</a></li>
-                        <li><a href="form-mask">@lang('translation.Form_Mask')</a></li>
                     </ul>
                 </li>
 
