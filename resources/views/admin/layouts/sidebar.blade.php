@@ -43,7 +43,7 @@
                     </a>
                     <ul class="sub-menu" aria-expanded="false">
                         <li><a href="{{ route('pemakai.index') }}">Data Pemakai</a></li>
-                        <li><a href="ui-buttons">@lang('translation.Buttons')</a></li>
+                        <li><a href="{{ route('nilaiPemakai.index') }}">Nilai Pemakai</a></li>
                     </ul>
                 </li>
 

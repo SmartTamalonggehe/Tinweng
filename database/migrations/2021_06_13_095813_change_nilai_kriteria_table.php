@@ -28,6 +28,9 @@ class ChangeNilaiKriteriaTable extends Migration
      */
     public function down()
     {
-        //
+        Schema::table('nilai_kriteria', function (Blueprint $table) {
+            $table->dropIndex('himpunan_id');
+            $table->string('himpunan', 20);
+        });
     }
 }
