@@ -4,7 +4,9 @@
 
 @section('css')
 <!-- datatables css -->
-<link href="{{ URL::asset('/assets/libs/datatables/datatables.min.css') }}" rel="stylesheet" type="text/css" />
+<link href="{{ URL::asset('/assets/libs/rwd-table/rwd-table.min.css') }}" rel="stylesheet" type="text/css" />
+{{-- <link href="{{ URL::asset('/assets/libs/datatables/datatables.min.css') }}" rel="stylesheet" type="text/css" />
+--}}
 <!-- Toastr -->
 <link type="text/css" href="{{ asset('assets/libs/toastr/toastr.min.css') }}" rel="stylesheet">
 <link href="{{ URL::asset('assets/libs/sweetalert2/sweetalert2.min.css') }}" rel="stylesheet" type="text/css" />

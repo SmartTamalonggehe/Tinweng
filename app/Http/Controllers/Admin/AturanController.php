@@ -113,6 +113,6 @@ class AturanController extends Controller
      */
     public function destroy($id)
     {
-        //
+        Aturan::where('kelompok', $id)->delete();
     }
 }
