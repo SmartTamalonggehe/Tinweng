@@ -36,39 +36,20 @@
                     </ul>
                 </li>
 
-                <li class="menu-title">@lang('translation.Components')</li>
-
                 <li>
                     <a href="javascript: void(0);" class="has-arrow waves-effect">
                         <i class="ti-package"></i>
-                        <span>@lang('translation.UI_Elements')</span>
+                        <span>Pemakai</span>
                     </a>
                     <ul class="sub-menu" aria-expanded="false">
-                        <li><a href="ui-alerts">@lang('translation.Alerts')</a></li>
+                        <li><a href="{{ route('pemakai.index') }}">Data Pemakai</a></li>
                         <li><a href="ui-buttons">@lang('translation.Buttons')</a></li>
-                        <li><a href="ui-cards">@lang('translation.Cards')</a></li>
-                        <li><a href="ui-carousel">@lang('translation.Carousel')</a></li>
-                        <li><a href="ui-dropdowns">@lang('translation.Dropdowns')</a></li>
-                        <li><a href="ui-grid">@lang('translation.Grid')</a></li>
-                        <li><a href="ui-images">@lang('translation.Images')</a></li>
-                        <li><a href="ui-lightbox">@lang('translation.Lightbox')</a></li>
-                        <li><a href="ui-modals">@lang('translation.Modals')</a></li>
-                        <li><a href="ui-rangeslider">@lang('translation.Range_Slider')</a></li>
-                        <li><a href="ui-session-timeout">@lang('translation.Session_Timeout')</a></li>
-                        <li><a href="ui-progressbars">@lang('translation.Progress_Bars')</a></li>
-                        <li><a href="ui-sweet-alert">@lang('translation.Sweet_Alert')</a></li>
-                        <li><a href="ui-tabs-accordions">@lang('translation.Tabs_&_Accordions')</a></li>
-                        <li><a href="ui-typography">@lang('translation.Typography')</a></li>
-                        <li><a href="ui-video">@lang('translation.Video')</a></li>
-                        <li><a href="ui-general">@lang('translation.General')</a></li>
-                        <li><a href="ui-colors">@lang('translation.Colors')</a></li>
-                        <li><a href="ui-rating">@lang('translation.Rating')</a></li>
                     </ul>
                 </li>
 
                 <li>
                     <a href="javascript: void(0);" class="waves-effect">
-                        <i class="ti-receipt"></i>
+                        <i class="ti-pie-chart"></i>
                         <span class="badge badge-pill badge-success float-right">6</span>
                         <span>@lang('translation.Forms')</span>
                     </a>

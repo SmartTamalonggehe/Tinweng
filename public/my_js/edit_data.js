@@ -22,6 +22,18 @@ if (route === "nilaiKriteria") {
         $("#tombolForm").html("Ubah Data");
     }
 }
+if (route === "pemakai") {
+    function dataForm(data) {
+        $("#id").val(data.id);
+        $("#nm_pemakai").val(data.nm_pemakai);
+        $("#umur").val(data.umur);
+        $("#jenkel").val(data.jenkel);
+        $("#alamat").val(data.alamat);
+        $(".tampilModal").modal("show");
+        $("#judul").html("Silahkan Merubah Data");
+        $("#tombolForm").html("Ubah Data");
+    }
+}
 
 $(".btnUbah").on("click", function(e) {
     e.preventDefault();
