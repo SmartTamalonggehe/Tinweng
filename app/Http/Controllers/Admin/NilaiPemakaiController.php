@@ -21,7 +21,7 @@ class NilaiPemakaiController extends Controller
         $nilaiPemakai = NilaiPemakai::all();
 
         $kriteria = DB::table('kriteria')->orderBy('nm_kriteria')
-            ->whereNotIn('jenis', ['Y'])
+            ->whereNotIn('jenis', ['Z'])
             ->get();
 
         $pemakai = Pemakai::orderBy('nm_pemakai')->get();

@@ -26,7 +26,9 @@ async function tampilPerhitungan() {
             }
         });
         perhitunganVariabelRendah(index, rendah, sedang, tinggi);
-        perhitunganVariabelSedang(index, rendah, sedang, tinggi);
+        if (value.jenis !== "Z") {
+            perhitunganVariabelSedang(index, rendah, sedang, tinggi);
+        }
         perhitunganVariabelTinggi(index, rendah, sedang, tinggi);
     });
 }

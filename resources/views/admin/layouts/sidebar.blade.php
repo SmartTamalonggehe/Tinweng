@@ -28,7 +28,7 @@
                 <li>
                     <a href="javascript: void(0);" class="has-arrow waves-effect">
                         <i class="ti-package"></i>
-                        <span>Perhitungan</span>
+                        <span>Logika</span>
                     </a>
                     <ul class="sub-menu" aria-expanded="false">
                         <li><a href="{{ route('hitungVariabel') }}">Variabel</a></li>
@@ -49,29 +49,12 @@
 
                 <li>
                     <a href="javascript: void(0);" class="has-arrow waves-effect">
-                        <i class="ti-pie-chart"></i>
-                        <span>@lang('translation.Charts')</span>
-                    </a>
-                    <ul class="sub-menu" aria-expanded="false">
-                        <li><a href="charts-morris">@lang('translation.Morris_Chart')</a></li>
-                        <li><a href="charts-chartist">@lang('translation.Chartist_Chart')</a></li>
-                        <li><a href="charts-chartjs">@lang('translation.Chartjs_Chart')</a></li>
-                        <li><a href="charts-flot">@lang('translation.Flot_Chart')</a></li>
-                        <li><a href="charts-knob">@lang('translation.Jquery_Knob_Chart')</a></li>
-                        <li><a href="charts-sparkline">@lang('translation.Sparkline_Chart')</a></li>
-                    </ul>
-                </li>
-
-                <li>
-                    <a href="javascript: void(0);" class="has-arrow waves-effect">
                         <i class="ti-view-grid"></i>
-                        <span>@lang('translation.Tables')</span>
+                        <span>Hasil Perhitugan</span>
                     </a>
                     <ul class="sub-menu" aria-expanded="false">
-                        <li><a href="tables-basic">@lang('translation.Basic_Tables')</a></li>
-                        <li><a href="tables-datatable">@lang('translation.Data_Table')</a></li>
-                        <li><a href="tables-responsive">@lang('translation.Responsive_Table')</a></li>
-                        <li><a href="tables-editable">@lang('translation.Editable_Table')</a></li>
+                        <li><a href="{{ route('hasil.index') }}">Perhitungan</a></li>
+                        <li><a href="tables-datatable">Hasil</a></li>
                     </ul>
                 </li>
 

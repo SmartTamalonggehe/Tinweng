@@ -29,7 +29,7 @@
                                         <select id="jenis" name="jenis" data-toggle="select" required
                                             class="form-control">
                                             <option value="X" selected="">X</option>
-                                            <option value="Y">Y</option>
+                                            <option value="Z">Z</option>
                                         </select>
                                     </div>
                                 </div>

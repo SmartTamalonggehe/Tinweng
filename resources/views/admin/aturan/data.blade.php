@@ -15,7 +15,7 @@
     <tbody>
         @foreach ($aturan->keyBy('kelompok') as $itemAturan)
         <tr>
-            <td>R1</td>
+            <td>R{{ $loop->iteration }}</td>
             @foreach ($aturan->sortBy('nilaiKriteria.kriteria.jenis') as
             $item)
             @if ($itemAturan->kelompok===$item->kelompok)

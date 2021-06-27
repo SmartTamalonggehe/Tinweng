@@ -1,6 +1,18 @@
-function grafikVariabel(myData, nm_kriteria = "Kritria", kategori) {
-    let options = {
-        series: [
+function grafikVariabel(myData, nm_kriteria = "Kritria", kategori, jenis) {
+    let my_series = [];
+    if (jenis === "Z") {
+        my_series.push(
+            {
+                name: "Rendah",
+                data: [1, 1, 0, 0]
+            },
+            {
+                name: "Tinggi",
+                data: [0, 0, 1, 1]
+            }
+        );
+    } else {
+        my_series.push(
             {
                 name: "Rendah",
                 data: [1, 1, 0, 0, 0]
@@ -13,7 +25,10 @@ function grafikVariabel(myData, nm_kriteria = "Kritria", kategori) {
                 name: "Tinggi",
                 data: [0, 0, 0, 1, 1]
             }
-        ],
+        );
+    }
+    let options = {
+        series: my_series,
         colors: ["#0341fc"],
         chart: {
             height: 350,
@@ -111,7 +126,12 @@ async function ulangGrafik() {
                 kategori.push(item.bobot_kriteria);
             }
         });
-        grafikVariabel(`chart${index}`, value.nm_kriteria, kategori);
+        grafikVariabel(
+            `chart${index}`,
+            value.nm_kriteria,
+            kategori,
+            value.jenis
+        );
         kategori = ["0"];
     });
 }
