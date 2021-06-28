@@ -232,7 +232,17 @@ class HasilController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        Hasil::truncate();
+        $ulang = $request->pemakai_id;
+
+        for ($i = 0; $i < count($ulang); $i++) {
+            Hasil::create([
+                'pemakai_id' => $request->pemakai_id[$i],
+                'nilai' => $request->hasil[$i],
+            ]);
+        }
+
+        return redirect()->route('showHasil');
     }
 
     /**

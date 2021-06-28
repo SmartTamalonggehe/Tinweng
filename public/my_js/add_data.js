@@ -1,6 +1,6 @@
 // Memanggil Modals
+save_method = "add";
 $("#tambah").on("click", function() {
-    save_method = "add";
     $("#judul_form").html("From Tambah Data");
     $("#tombolForm").html("Simpan Data");
     $("#formKu").trigger("reset");

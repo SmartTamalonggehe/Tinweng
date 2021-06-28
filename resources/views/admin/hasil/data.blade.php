@@ -7,22 +7,22 @@
             <th>No</th>
             <th>Nama Pemakai</th>
             @foreach ($nilai_kriteria->keyBy('kriteria_id') as $item)
-            <th>{{ $item->kriteria->nm_kriteria }}</th>
+                <th>{{ $item->kriteria->nm_kriteria }}</th>
             @endforeach
         </tr>
     </thead>
 
     <tbody>
         @foreach ($pemakai as $item_pemakai)
-        <tr>
-            <td>{{ $loop->iteration }}</td>
-            <td>{{ $item_pemakai->nm_pemakai }}</td>
-            @foreach ($nilai_pemakai as $item)
-            @if ($item_pemakai->id === $item->pemakai_id)
-            <td>{{ $item->bobot_pemakai }}</td>
-            @endif
-            @endforeach
-        </tr>
+            <tr>
+                <td>{{ $loop->iteration }}</td>
+                <td>{{ $item_pemakai->nm_pemakai }}</td>
+                @foreach ($nilai_pemakai as $item)
+                    @if ($item_pemakai->id === $item->pemakai_id)
+                        <td>{{ $item->bobot_pemakai }}</td>
+                    @endif
+                @endforeach
+            </tr>
         @endforeach
     </tbody>
 </table>
@@ -38,7 +38,7 @@
             {{-- <th>No</th> --}}
             <th>Nama Pemakai</th>
             @foreach ($nilai_kriteria->keyBy('kriteria_id') as $item)
-            <th>{{ $item->kriteria->nm_kriteria }}</th>
+                <th>{{ $item->kriteria->nm_kriteria }}</th>
             @endforeach
         </tr>
     </thead>
@@ -51,11 +51,16 @@
 <hr>
 <h4 class=" title mt-4 text-center mb-4"> Inferensi</h4>
 
-        <p id="inferensi"></p>
-
-
-
-
+        <div>
+            <p id="inferensi"></p>
+        </div>
+        <h4 class=" title mt-4 text-center mb-4">Defuzifikasi</h4>
+        <form id="formKu" method="post">
+            @csrf
+            <div>
+                <p id="defuzifikasi"></p>
+            </div>
+        </form>
 
         <script src=" {{ URL::asset('/assets/libs/datatables/datatables.min.js') }}">
         </script>
@@ -69,7 +74,6 @@
 
         <script>
             $('.datatable').dataTable({
-responsive:true,
-})
-
+                responsive: true,
+            })
         </script>

@@ -45,6 +45,11 @@ let cariZ;
 let Z;
 let min;
 let tampilRumusZ;
+let dtDefuz = [];
+let perkalianDefuz = [];
+let penjumlahanDefuz = [];
+
+let tagDefuzifikasi = $("#defuzifikasi");
 
 async function tampilInferensi() {
     let data = await ambilDefinisi();
@@ -81,10 +86,44 @@ async function tampilInferensi() {
             )}
             </p>`);
             tagInferensi.append(`</p>`);
-
-            hitungCrips(elementPemakai.id, nilaiMin, Z);
+            dtDefuz.push({
+                pemakai_id: elementPemakai.id,
+                nm_pemakai: elementPemakai.nm_pemakai,
+                nilaiMin: nilaiMin,
+                Z: Z
+            });
         });
+        // Mencari Nilai DEFUZIFIKAZI
+        tagDefuzifikasi.append(`<h5>${elementPemakai.nm_pemakai}</h5>`);
+
+        dtDefuz.forEach(element => {
+            if (element.pemakai_id === elementPemakai.id) {
+                // defuzifikasi(element.nilaiMin, element.Z);
+                perkalianDefuz.push(element.nilaiMin * element.Z);
+                penjumlahanDefuz.push(element.nilaiMin);
+                // perkalianDefuz.forEach(element => {
+                //     tagDefuzifikasi.append(`<p class="defuz">${element}</p>`);
+                // });
+            }
+        });
+        var sum = perkalianDefuz.reduce(function(a, perkalianDefuz) {
+            return a + perkalianDefuz;
+        }, 0);
+        var jmlhZ = penjumlahanDefuz.reduce(function(a, penjumlahanDefuz) {
+            return a + penjumlahanDefuz;
+        }, 0);
+
+        tagDefuzifikasi.append(`Z = ${sum.toFixed(2)} / ${jmlhZ.toFixed(2)}`);
+        let total_akhir = sum / jmlhZ;
+        tagDefuzifikasi.append(`<h6>Z = ${total_akhir.toFixed(2)}</h6>`);
+
+        simpanHasil(total_akhir.toFixed(2), elementPemakai.id);
+        perkalianDefuz = [];
     });
+
+    tagDefuzifikasi.append(
+        `<button type="submit" class=" btn btn-primary">Simpan Hasil</button>`
+    );
 }
 
 // Memberi Nilai pada setiap aturan
@@ -173,8 +212,16 @@ function hitungNilaiZ(nilaiMin, cariZ) {
     return tampilRumusZ;
 }
 
-function hitungCrips(pemakai, nilaiMin, Z) {
-    console.log(`${pemakai} dan ${nilaiMin} dan ${Z}`);
+// function defuzifikasi(nilaiMin, Z) {
+//     perkalianDefuz.push(nilaiMin * Z);
+//     return perkalianDefuz;
+// }
+
+function simpanHasil(hasil, pemakai_id) {
+    let form = ` <input type="hidden" value="${pemakai_id}" name="pemakai_id[]">
+            <input type="hidden" value="${hasil}" name="hasil[]">`;
+
+    tagDefuzifikasi.append(form);
 }
 
 tampilInferensi();

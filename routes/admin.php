@@ -8,6 +8,7 @@ use App\Http\Controllers\Admin\NilaiKriteriaController;
 use App\Http\Controllers\Admin\PemakaiController;
 use App\Http\Controllers\Admin\PerhitunganController;
 use App\Http\Controllers\Admin\NilaiPemakaiController;
+use App\Http\Controllers\Admin\ShowHasilController;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', [DashboardController::class, 'index'])->name('admin');
@@ -20,3 +21,5 @@ Route::resource('aturan', AturanController::class);
 Route::resource('pemakai', PemakaiController::class);
 Route::resource('nilaiPemakai', NilaiPemakaiController::class);
 Route::resource('hasil', HasilController::class);
+
+Route::get('showHasil', [ShowHasilController::class, 'index'])->name('showHasil');
