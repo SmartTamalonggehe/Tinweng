@@ -3,23 +3,7 @@
         <div class="d-flex">
             <!-- LOGO -->
             <div class="navbar-brand-box">
-                <a href="index" class="logo logo-dark">
-                    <span class="logo-sm">
-                        <img src="{{ URL::asset('/assets/images/logo.svg') }}" alt="" height="22">
-                    </span>
-                    <span class="logo-lg">
-                        <img src="{{ URL::asset('/assets/images/logo-dark.png') }}" alt="" height="17">
-                    </span>
-                </a>
-
-                <a href="index" class="logo logo-light">
-                    <span class="logo-sm">
-                        <img src="{{ URL::asset('/assets/images/logo-sm.png') }}" alt="" height="22">
-                    </span>
-                    <span class="logo-lg">
-                        <img src="{{ URL::asset('/assets/images/logo-light.png') }}" alt="" height="18">
-                    </span>
-                </a>
+                <h3 class="mt-4">Tinweng</h3>
             </div>
 
             <button type="button" class="btn btn-sm px-3 font-size-24 header-item waves-effect" id="vertical-menu-btn">
@@ -60,12 +44,16 @@
 
 
             <div class="dropdown d-inline-block mt-3">
-                <a class="dropdown-item text-danger" href="javascript:void();"
-                    onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
+                <a class="dropdown-item text-danger" href={{ route('logout') }}" onclick="event.preventDefault();
+                                                     document.getElementById('logout-form').submit();">
                     <i class="mdi mdi-lock-open-outline font-size-17 align-middle mr-1"></i>
                     @lang('translation.Logout')
                 </a>
             </div>
+
+            <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                @csrf
+            </form>
 
         </div>
     </div>
